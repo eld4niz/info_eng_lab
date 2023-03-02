@@ -6,6 +6,15 @@ using namespace std;
 
 class Student {
 public:
+
+    Student(string your_name){
+        cout << "Your name is " << your_name << endl;
+    }
+
+    Student(){
+        cout << "You don't have name, get an one with another function" << endl;
+    }
+
     float calculate_grade() {
         float sum = std::accumulate(grades.begin(), grades.end(), 0.0f);
         return sum / grades.size();
@@ -37,7 +46,8 @@ private:
 };
 
 int main(){
-    Student student;
+    Student student("Eldaniz");
+    Student student2;
     student.calculate_grade();
     student.add_grade(4);
 }
