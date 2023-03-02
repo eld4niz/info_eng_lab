@@ -7,8 +7,12 @@ using namespace std;
 class Student {
 public:
 
-    Student(string your_name){
-        cout << "Your name is " << your_name << endl;
+    void set_index(string name){
+        this->name = name;
+    }
+
+    string set_hp(){
+        return name;
     }
 
     Student(){
